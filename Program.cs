@@ -8,14 +8,14 @@ class Calculator
         {
             Console.WriteLine("Lütfen sınav puanınızı girin (Çıkmak için 'çık' yazın):");
 
-            var input = Console.ReadLine();//Get input
+            var Input = Console.ReadLine();//Get input
 
-            if (input.ToLower() == "çık")
+            if (Input.ToLower() == "çık")
             {
                 break;
             }
 
-            if (int.TryParse(input, out int Point))//Check if the input is a valid integer
+            if (int.TryParse(Input, out int Point))//Check if the input is a valid integer
             {
                 if (Point >= 0 && Point <= 100)
                 {
