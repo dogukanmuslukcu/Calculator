@@ -4,18 +4,18 @@ class Calculator
 {
     static void Main(string[] args)
     {
-        while (true)
+        while (true)//infinte loop that runs the program until the user types "exit"
         {
             Console.WriteLine("Lütfen sınav puanınızı girin (Çıkmak için 'çık' yazın):");
 
-            var input = Console.ReadLine();
+            var input = Console.ReadLine();//Get input
 
             if (input.ToLower() == "çık")
             {
                 break;
             }
 
-            if (int.TryParse(input, out int Point))
+            if (int.TryParse(input, out int Point))//Check if the input is a valid integer
             {
                 if (Point >= 0 && Point <= 100)
                 {
@@ -33,7 +33,7 @@ class Calculator
             }
         }
     }
-    static string CalculateGrade(int point)
+    static string CalculateGrade(int point)// This methot provides calculate the letter grade for point
     {
         if (point >= 90 && point <= 100)
         {
